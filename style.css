@@ -7,7 +7,7 @@
 
 body, html {
     height: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
     font-family: 'Cormorant Garamond', serif;
     color: #ffffff;
     display: flex;
@@ -22,12 +22,15 @@ body {
 
 .content {
     max-width: 800px;
+    width: 90%;
     padding: 20px;
     background: rgba(0, 0, 30, 0.85);
     border-radius: 15px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
     text-align: left;
-    margin: 20px; /* added margin for smaller screens */
+    margin: 20px auto; /* centered on small screens */
+    overflow-y: auto;
+    max-height: 90vh; /* limits height on mobile to avoid overflow */
 }
 
 h1 {
@@ -69,15 +72,15 @@ p {
     color: #4a47a3;
 }
 
-/* Responsive styling for smaller screens */
+/* Responsive styling for tablets and smaller screens */
 @media (max-width: 768px) {
     .content {
-        max-width: 90%; /* Adjusted for small screens */
+        max-width: 90%; /* Allows flexibility on small screens */
         padding: 15px;
     }
 
     h1 {
-        font-size: 2em; /* Slightly smaller for mobile */
+        font-size: 2em; /* Reduced for mobile */
     }
 
     p {
@@ -93,6 +96,7 @@ p {
     }
 }
 
+/* Responsive styling for smaller phones */
 @media (max-width: 480px) {
     h1 {
         font-size: 1.75em;
@@ -104,5 +108,10 @@ p {
 
     .japanese-text {
         font-size: 1.3em;
+    }
+
+    .content {
+        padding: 10px;
+        border-radius: 10px;
     }
 }
