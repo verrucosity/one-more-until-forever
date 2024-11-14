@@ -1,0 +1,108 @@
+/* Reset margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Cormorant Garamond', serif;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    background: url('https://media.giphy.com/media/l3c614V12UA82q1vG/giphy.gif') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.content {
+    max-width: 800px;
+    padding: 20px;
+    background: rgba(0, 0, 30, 0.85);
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    text-align: left;
+    margin: 20px; /* added margin for smaller screens */
+}
+
+h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #f3e7e9;
+    text-shadow: 0px 0px 10px #6666cc;
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.release-info {
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: 20px;
+    font-weight: bold;
+    color: #a6b0e1;
+}
+
+.album-link {
+    color: #6f67d2;
+    text-decoration: underline;
+}
+
+.japanese-text {
+    text-align: center;
+    font-size: 2em;
+    margin-top: 20px;
+    color: #a6b0e1;
+}
+
+.album-link:hover {
+    color: #4a47a3;
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 768px) {
+    .content {
+        max-width: 90%; /* Adjusted for small screens */
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2em; /* Slightly smaller for mobile */
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    .release-info {
+        font-size: 1em;
+    }
+
+    .japanese-text {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.75em;
+    }
+
+    p {
+        font-size: 0.95em;
+    }
+
+    .japanese-text {
+        font-size: 1.3em;
+    }
+}
