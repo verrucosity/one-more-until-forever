@@ -20,6 +20,22 @@ body {
     background-size: cover;
 }
 
+/* Custom scroll bar styling */
+.content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.content::-webkit-scrollbar-track {
+    background: rgba(0, 0, 30, 0.3); /* Slightly darker background */
+    border-radius: 10px;
+}
+
+.content::-webkit-scrollbar-thumb {
+    background-color: #6f67d2; /* Scrollbar thumb color */
+    border-radius: 10px;
+    border: 2px solid rgba(0, 0, 30, 0.85); /* Optional border for better contrast */
+}
+
 .content {
     max-width: 800px;
     width: 90%;
@@ -28,9 +44,9 @@ body {
     border-radius: 15px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
     text-align: left;
-    margin: 20px auto; /* centered on small screens */
+    margin: 20px auto;
     overflow-y: auto;
-    max-height: 90vh; /* limits height on mobile to avoid overflow */
+    max-height: 90vh;
 }
 
 h1 {
@@ -75,12 +91,12 @@ p {
 /* Responsive styling for tablets and smaller screens */
 @media (max-width: 768px) {
     .content {
-        max-width: 90%; /* Allows flexibility on small screens */
+        max-width: 90%;
         padding: 15px;
     }
 
     h1 {
-        font-size: 2em; /* Reduced for mobile */
+        font-size: 2em;
     }
 
     p {
